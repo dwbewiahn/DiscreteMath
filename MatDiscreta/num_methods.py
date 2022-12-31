@@ -14,4 +14,6 @@ def mid_point(funcao, x_inicial, x_final, delta_x):
         x+=delta_x
     return soma
 
+# Testando com f=sin e dx=0.1 no intervalo [0, pi/2]
+# O resultado esperado é 1
 print(mid_point(sin, 0, pi/2, 0.1))
