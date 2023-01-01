@@ -18,10 +18,8 @@ def trapezoidal(f, x0, xf, dx):
     x1 = x0
     x2 = x0 + dx
     
-    while x1<=xf:
-              
-        soma += 0.5*dx*( f(x1) + f(x2) )
-        
+    while x1<=xf:           
+        soma += 0.5*dx*( f(x1) + f(x2) )      
         x1 += dx
         x2 += dx
     
