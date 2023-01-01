@@ -18,8 +18,6 @@ def mid_point(funcao, x_inicial, x_final, delta_x):
 # O resultado esperado é 1
 print(mid_point(sin, 0, pi/2, 0.1))
 
-
-
 # Testando com f=sin(x)/x
 # para dx=0.1 no intervalo [0, pi]
 # O resultado esperado é ≈ 1.85194
@@ -35,3 +33,16 @@ def my_func(var_x):
     return sin(var_x)/var_x
 
 print(mid_point(my_func, 0, pi, 0.1))
+
+# Testando com vários dx para sin(x)
+dx_list = [0.5, 0.2, 0.1, 0.01, 0.001]
+
+print("dx \t     Integral \t D.Integral")
+
+i_antigo=0
+
+for dx in dx_list:
+    i = mid_point(sin, 0, pi/2, dx)
+    delta_i = abs(i-i_antigo)
+    print(f"{dx:.3f} \t {i:.6f} \t {delta_i:.6f}")
+    i_antigo=i
