@@ -11,7 +11,7 @@ def trapezoidal(f, x0, xf, dx):
     dx: tamanho dos subintervalos de integração
     """
 
-    # A soma das subáreas
+    # A soma das sub-áreas
     soma = 0
     
     # Precisamos de dois ponto no intervalo dx
@@ -24,3 +24,8 @@ def trapezoidal(f, x0, xf, dx):
         x2 += dx
     
     return soma
+
+# Testando com f=sin e dx=0.1 no intervalo [0, pi/2]
+# O resultado esperado é 1
+
+trapezoidal(sin, 0, pi/2, 0.1)
