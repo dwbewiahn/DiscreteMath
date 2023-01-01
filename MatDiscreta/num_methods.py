@@ -17,3 +17,21 @@ def mid_point(funcao, x_inicial, x_final, delta_x):
 # Testando com f=sin e dx=0.1 no intervalo [0, pi/2]
 # O resultado esperado é 1
 print(mid_point(sin, 0, pi/2, 0.1))
+
+
+
+# Testando com f=sin(x)/x
+# para dx=0.1 no intervalo [0, pi]
+# O resultado esperado é ≈ 1.85194
+
+# Não podemos fazer isto
+# Integrate(sin(x)/x, 0, pi, 0.1)
+
+# Podemos passar uma função, mas não uma expressão
+
+# Neste caso criamos a função myFunc, equivalente à função matemática que pretendemos
+
+def my_func(var_x):
+    return sin(var_x)/var_x
+
+print(mid_point(my_func, 0, pi, 0.1))
