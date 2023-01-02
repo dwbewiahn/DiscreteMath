@@ -29,3 +29,4 @@ def trapezoidal(f, x0, xf, dx):
 # O resultado esperado é 1
 
 trapezoidal(sin, 0, pi/2, 0.1)
+trapezoidal(sin, 0, pi/2, 0.1)
